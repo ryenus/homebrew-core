@@ -34,8 +34,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: sync-upstream
       run: |
-        git clone "${{ github.events.input.fork }}" .
-        git checkout "${{ github.events.input.branch }}"
-        git remote add --mirror=fetch upstream "${{ github.events.input.upstream }}"
-        git fetch "${{ github.events.input.upstream }}"
-        git rebase "upstream/${{ github.events.input.branch }}" && git push --force-with-lease
+        git clone "${{ github.event.inputs.fork }}" .
+        git checkout "${{ github.event.inputs.branch }}"
+        git remote add --mirror=fetch upstream "${{ github.event.inputs.upstream }}"
+        git fetch "${{ github.event.inputs.upstream }}"
+        git rebase "upstream/${{ github.event.inputs.branch }}" && git push --force-with-lease
