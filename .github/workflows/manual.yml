@@ -34,8 +34,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: sync-upstream
       run: |
-        git clone ${{github.events.input.fork}} .
-        git checkout ${{github.events.input.branch}}
-        git remote add --mirror=fetch upstream https://github.com/Homebrew/homebrew-core
-        git fetch ${{github.events.input.upstream}}
-        git rebase upstream/${{github.events.input.branch}} && git push --force-with-lease
+        git clone "${{ github.events.input.fork }}" .
+        git checkout "${{ github.events.input.branch }}"
+        git remote add --mirror=fetch upstream "${{ github.events.input.upstream }}"
+        git fetch "${{ github.events.input.upstream }}"
+        git rebase "upstream/${{ github.events.input.branch }}" && git push --force-with-lease
