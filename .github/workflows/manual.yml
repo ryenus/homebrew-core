@@ -38,5 +38,4 @@ jobs:
         git checkout ${{github.events.input.branch}}
         git remote add --mirror=fetch upstream https://github.com/Homebrew/homebrew-core
         git fetch ${{github.events.input.upstream}}
-        git rebase upstream/${{github.events.input.branch}}
-        git push
+        git rebase upstream/${{github.events.input.branch}} && git push --force-with-lease
