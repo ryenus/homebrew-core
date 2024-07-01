@@ -1,10 +1,10 @@
 class Openssh < Formula
   desc "OpenBSD freely-licensed SSH connectivity tools"
   homepage "https://www.openssh.com/"
-  url "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.7p1.tar.gz"
-  mirror "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.7p1.tar.gz"
-  version "9.7p1"
-  sha256 "490426f766d82a2763fcacd8d83ea3d70798750c7bd2aff2e57dc5660f773ffd"
+  url "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.8p1.tar.gz"
+  mirror "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.8p1.tar.gz"
+  version "9.8p1"
+  sha256 "dd8bd002a379b5d499dfb050dd1fa9af8029e80461f4bb6c523c49973f5a39f3"
   license "SSH-OpenSSH"
 
   livecheck do
@@ -57,8 +57,8 @@ class Openssh < Formula
   end
 
   resource "com.openssh.sshd.sb" do
-    url "https://raw.githubusercontent.com/apple-oss-distributions/OpenSSH/OpenSSH-268.100.4/com.openssh.sshd.sb"
-    sha256 "a273f86360ea5da3910cfa4c118be931d10904267605cdd4b2055ced3a829774"
+    url "https://raw.githubusercontent.com/apple-oss-distributions/OpenSSH/rel/OpenSSH-282/com.openssh.sshd.sb"
+    sha256 "f2c3c296b9e4ac11d555879cbe73c59e08e51139372c920bf55ab5cee628ecb3"
   end
 
   def install
